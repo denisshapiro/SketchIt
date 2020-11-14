@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="AnchorPane" maxHeight="2160.0" maxWidth="3840.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #ffe4e4;" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.SketchIt.FXMLController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#newEvt" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#loadEvt" text="Load" />
+            <MenuItem mnemonicParsing="false" onAction="#saveEvt" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#quitEvt" text="Quit" />
+          </items>
+        </Menu>
+          <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#copyEvt" text="Copy" />
+                  <MenuItem mnemonicParsing="false" onAction="#pasteEvt" text="Paste" />
+                  <MenuItem mnemonicParsing="false" onAction="#cutEvt" text="Cut" />
+              </items>
+          </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#launchAbout" text="About SketchIt" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <VBox fx:id="toolBox" prefHeight="678.0" prefWidth="98.0">
+               <children>
+                  <GridPane prefHeight="216.0" prefWidth="98.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" prefWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                         <ImageView fx:id="tap" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+                             <image><Image url="@/tapUnselected.png" /></image>
+                         </ImageView>
+                         <ImageView fx:id="rect" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                             <image><Image url="@/rectangleUnselected.png" /></image>
+                         </ImageView>
+                         <ImageView fx:id="circle" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                             <image><Image url="@/circleUnselected.png" /></image>
+                         </ImageView>
+                         <ImageView fx:id="line" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                             <image><Image url="@/lineUnselected.png" /></image>
+                         </ImageView>
+                         <ImageView fx:id="eraser" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                             <image><Image url="@/eraserUnselected.png" /></image>
+                         </ImageView>
+                         <ImageView fx:id="fill" fitHeight="40" fitWidth="40" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" onMousePressed="#mousePressed" pickOnBounds="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                             <image><Image url="@/paintUnselected.png" /></image>
+                         </ImageView>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane prefHeight="317.0" prefWidth="98.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="30.0" />
+                     </padding>
+                     <children>
+                        <ColorPicker fx:id="lineColorPicker" accessibleText="Line Colour" onAction="#setLineColEvt" promptText="Line Colour" styleClass="ColorPicker" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+                           <GridPane.margin>
+                           </GridPane.margin></ColorPicker>
+                        <ColorPicker fx:id="shapeColorPicker" accessibleText="Fill Colour" onAction="#setShapeColEvt" promptText="Fill Colour" styleClass="ColorPicker" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                           </GridPane.margin></ColorPicker>
+                         <Separator GridPane.rowIndex="2" />
+                         <RadioButton fx:id="solidButton" mnemonicParsing="false" onMouseClicked="#setSolidEvt" styleClass="radioSelect" GridPane.rowIndex="3" />
+                         <RadioButton fx:id="dashedButton" mnemonicParsing="false" onMouseClicked="#setDashedEvt" styleClass="radioSelect" GridPane.rowIndex="4" />
+                         <RadioButton fx:id="dottedButton" mnemonicParsing="false" onMouseClicked="#setDottedEvt" styleClass="radioSelect" GridPane.rowIndex="5" />
+                         <Separator GridPane.rowIndex="6" />
+                         <RadioButton fx:id="thickButton" mnemonicParsing="false" onMouseClicked="#setThick" styleClass="radioSelect" GridPane.rowIndex="7" />
+                         <RadioButton fx:id="normalButton" mnemonicParsing="false" onMouseClicked="#setNormal" styleClass="radioSelect" GridPane.rowIndex="8" />
+                         <RadioButton fx:id="thinButton" mnemonicParsing="false" onMouseClicked="#setThin" styleClass="radioSelect" GridPane.rowIndex="9" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <Pane fx:id="canvas" layoutX="106.0" layoutY="5.0" onMouseDragged="#canvasMove" onMousePressed="#canvasClick" onMouseReleased="#canvasRelease" prefHeight="668.0" prefWidth="889.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="5.222222222222172" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="4.666666666666629" AnchorPane.topAnchor="5.0">
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

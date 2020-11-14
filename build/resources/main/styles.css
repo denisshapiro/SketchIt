@@ -1,0 +1,29 @@
+.radioSelect:selected {
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.radioSelect {
+    -fx-background-color: white;
+    -fx-border-radius: 5;
+}
+
+.ColorPicker{
+    -fx-background-color: #d2d2d2;
+}
+
+.selected{
+    -fx-effect: dropshadow(gaussian, rgb(103,120,246), 10, 0.5, 0.0, 0.0);
+}
+
+.solidStyle{
+    -fx-stroke-dash-array: 1;
+}
+
+.dashedStyle{
+    -fx-stroke-dash-array: 10;
+}
+
+.dottedStyle{
+    -fx-stroke-dash-array: 2 10;
+}
