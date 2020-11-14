@@ -1,5 +1,7 @@
 # SketchIt
 
+A vector graphics drawing application
+
 ## Features
 * Draw Lines
 * Draw Rectangles
